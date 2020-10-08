@@ -1,3 +1,7 @@
+/**
+ * Author: Mayur
+ */
+
 import connection from './v1/connection';
 import whiteboard from './v1/whiteboard';
 

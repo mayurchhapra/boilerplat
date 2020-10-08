@@ -1,15 +1,19 @@
+/**
+ * Author: Mayur
+ */
+
 import { Router } from 'express';
 
-const controller = require('../../controller/v1/whiteboard.controller');
+import controller from '../../controller/v1/whiteboard.controller';
 
 const router = Router();
 
 router
-  .get('/get/:w_id', controller.getById)
+  .get('/get/:whiteboard_id', controller.getById)
   .get('/list', controller.list)
   .post('/save', controller.create)
-  .put('/save/:w_id', controller.update)
-  .delete('/remove/:w_id', controller.deleteById)
-  .delete('/hide/:w_id', controller.hideById);
+  .patch('/save/:whiteboard_id', controller.update)
+  .delete('/remove/:whiteboard_id', controller.deleteById)
+  .delete('/hide/:whiteboard_id', controller.hideById);
 
 module.exports = router;

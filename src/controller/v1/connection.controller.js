@@ -1,3 +1,7 @@
+/**
+ * Author: Mayur
+ */
+
 import service from '../../service/v1/connection.service';
 
 const conn = (req, res) => {
@@ -12,6 +16,6 @@ const conn = (req, res) => {
   }
 };
 
-module.exports = {
+export default {
   conn,
 };
